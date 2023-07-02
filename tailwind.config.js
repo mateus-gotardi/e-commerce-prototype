@@ -12,6 +12,7 @@ module.exports = {
       'accents-2': '#F6EBDA',
       'primary':'#FF902B',
       'secondary':'#2F2105',
+      'tertiary': '#F4AE26',
       'glass':'#FFFFFF',
       'light':'#7E7D7A',
       'lowprimary':'#FFD28F',

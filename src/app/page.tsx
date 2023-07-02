@@ -1,5 +1,5 @@
 import { cn } from "@/utils";
-import { Box, BuyMe, Cappuccino, Header, Popular, Delivery } from "@/components";
+import { Box, BuyMe, Cappuccino, Header, Popular, Delivery, About } from "@/components";
 
 export default function Home() {
   return (
@@ -13,6 +13,7 @@ export default function Home() {
       </Box>
       <Popular />
       <Delivery />
+      <About />
     </main>
   );
 }
