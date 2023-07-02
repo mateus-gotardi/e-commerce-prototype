@@ -14,6 +14,7 @@ module.exports = {
       'secondary':'#2F2105',
       'glass':'#FFFFFF',
       'light':'#7E7D7A',
+      'lowprimary':'#FFD28F',
     },
     extend: {
       backgroundImage: {

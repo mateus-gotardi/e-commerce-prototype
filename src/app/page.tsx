@@ -12,7 +12,6 @@ export default function Home() {
         <BuyMe />
         <Cappuccino />
       </Box>
-
       <Popular />
 
     </main>
