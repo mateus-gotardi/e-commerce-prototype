@@ -5,5 +5,6 @@ import Cappuccino from "./cappuccino";
 import Delivery from "./delivery";
 import Header from "./header";
 import Popular from "./popular";
+import Special from "./special";
 
-export { Box, Header, Cappuccino, BuyMe, Popular, Delivery, About };
+export { Box, Header, Cappuccino, BuyMe, Popular, Delivery, About, Special };

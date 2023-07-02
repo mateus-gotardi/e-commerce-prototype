@@ -33,7 +33,7 @@ export default function Popular() {
                 </div>
                 <div className={cn("bg-accents h-52 w-[95vw] rounded-b-[4rem] relative top-[-14rem] left-[4px] p-10 flex items-start justify-around")}>
                     {products.map((product, index) => {
-                        return <ProductCard key={index} product={product} />
+                        return <ProductCard key={index} product={product} type='popular' />
                     })}
 
                 </div>
