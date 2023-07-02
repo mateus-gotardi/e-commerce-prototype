@@ -7,7 +7,7 @@ export default function Box(props: { children: string | number | boolean | React
     <div className={cn("flex items-center justify-start flex-col bg-accents-2 h-[140vh]")}>
     <div
       className={cn(
-        "h-screen w-screen inset-0 flex justify-center gap-10 items-center p-5"
+        "h-screen w-screen inset-0 flex justify-center gap-10 items-center"
       )}
     >
       <Image
@@ -18,7 +18,7 @@ export default function Box(props: { children: string | number | boolean | React
         height={450}
       />
       <Image
-        className={cn("z-0 absolute bottom-[-18rem] left-5 ")}
+        className={cn("z-0 absolute bottom-[-18rem] left-[-3rem] ")}
         src="/images/coffeegrains.png"
         alt="coffee grains"
         width={600}

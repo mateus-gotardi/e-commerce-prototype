@@ -6,7 +6,7 @@ export default function Header(props: { page?: string }) {
     return (
         <header
             className={cn(
-                "absolute top-0 flex flex-row justify-between w-full h-fit items-center py-4 z-50 px-32"
+                "absolute top-0 flex flex-row justify-between w-full h-fit items-center py-4 z-50 px-20"
             )}
         >
             <a className={cn("cursor-pointer")}>
