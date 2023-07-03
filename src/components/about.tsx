@@ -5,7 +5,7 @@ import { subsubtitle, subtitle, underlined } from "./commonStyle";
 
 export default function About() {
     return (
-        <section id="about" className={cn("w-full h-[30rem] bg-accents-2 flex align-center justify-around mb-28")}>
+        <section id="about" className={cn("w-screen h-[30rem] bg-accents-2 flex align-center justify-around mb-28")}>
             <div className={cn("w-1/2 flex items-center justify-center")}>
                 <div className={cn("relative top-[-5rem] overflow-hidden rounded-lg outline outline-[7px] outline-glass/60 shadow-2xl")}>
                     <Image src="/images/about-coffee.jpg" alt="coffee cup" width={359} height={497} />

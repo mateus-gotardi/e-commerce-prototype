@@ -18,7 +18,7 @@ export default function Special() {
         price: '13 K'
     },
     {
-        imageURL: "/images/ice.png",
+        imageURL: "/images/ice.jpg",
         name: 'Coffee Ice Cream',
         description: 'special coffee with baunilha ice cream',
         rating: '4.6',
@@ -47,9 +47,9 @@ export default function Special() {
     },
     ]
     return (
-        <div className="flex flex-col items-start justify-center w-[95vw]">
-            <h2 className={cn(subtitle, "mb-4 ml-12")}>Special menu <span className={cn(underlined)}>for you</span></h2>
-            <div className="w-full flex flex-wrap justify-center items-start">
+        <div className="flex flex-col items-start justify-center w-[98vw] gap-8">
+            <h2 className={cn(subtitle, "ml-20")}>Special menu <span className={cn(underlined)}>for you</span></h2>
+            <div className="w-full flex flex-wrap justify-center items-start gap-10">
                 {products.map((product, index) => {
                     return <ProductCard key={index} product={product} type='special' />
                 })}
