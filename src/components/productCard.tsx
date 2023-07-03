@@ -15,7 +15,7 @@ export default function ProductCard(props: {
     let imageContainer = "w-[19rem] h-[19rem] bg-primary overflow-hidden rounded-[0.8rem]"
     let card = "bg-glass rounded-[0.8rem] flex flex-col items-center justify-between px-5 py-6 shadow-xl relative"
     return (
-        <div className={props.type.toLocaleLowerCase() === "popular" ? cn(card, "h-[24rem] w-[22rem] top-[-19.5rem] outline outline-glass/60 outline-[6px]") : cn(card, 'mb-3 h-[26rem] w-[22rem]')}>
+        <div className={props.type.toLocaleLowerCase() === "popular" ? cn(card, "h-[24rem] w-[22rem] lg:top-[-19.5rem] outline outline-glass/60 outline-[6px]") : cn(card, 'mb-3 h-[26rem] w-[22rem]')}>
             <div className={cn(imageContainer)}>
                 <Image src={props.product.imageURL} alt={props.product.name}
                     width={350} height={350} className={cn("rounded-[0.8rem] aspect-auto object-cover h-full w-full")} />

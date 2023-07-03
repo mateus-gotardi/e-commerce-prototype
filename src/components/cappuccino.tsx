@@ -7,7 +7,7 @@ import { sticker } from "./commonStyle";
 export default function Cappuccino() {
     let bigSticker = sticker + "outline-[6px] py-1.5 absolute"
     return (
-        <div className={cn("w-[26rem] h-[26rem] rounded-full bg-secondary justify-center items-center flex inset-0 z-10")}>
+        <div className={cn("w-[26rem] h-[26rem] hidden rounded-full bg-secondary justify-center items-center lg:flex inset-0 z-10")}>
             <Image
                 className={cn("absolute")}
                 src="/images/draw.svg"

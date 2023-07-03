@@ -6,7 +6,7 @@ export default function Home() {
     <main
       className={cn("flex min-h-screen flex-col items-center justify-between overflow-x-hidden")}
     >
-      <Header page="home" />
+      <Header />
       <Box>
         <BuyMe />
         <Cappuccino />

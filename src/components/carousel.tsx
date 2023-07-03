@@ -5,10 +5,18 @@ import Image from "next/image";
 import { shytext, subsubtitle, subtitle, underlined } from "./commonStyle";
 
 export default function Carousel() {
+    let largura = window.screen.width
+    console.log(largura)
+    let passo = 3
+    if (largura < 1024) {
+        passo = 2
+    } else if (largura < 768) {
+        passo = 1
+    }
     const [current, setCurrent] = React.useState(0);
     const [selection, setSelection] = React.useState([{ img: "", name: "", testemony: "" }]);
     useEffect(() => {
-        setSelection(testemonys.slice(current, current + 3))
+        setSelection(testemonys.slice(current, current + passo))
     }, [current]);
     const testemonys = [
         {
@@ -54,8 +62,8 @@ export default function Carousel() {
     ]
     let button = "p2 rounded-full w-2 h-2 cursor-pointer"
     return (
-        <section className={cn("w-[62vw] flex flex-col justify-between items-start absolute right-0")}>
-            <div className={cn("flex gap-2 justify-between items-start w-full")}>
+        <section className={cn("w-[62vw] flex flex-col justify-between items-start xl:ml-[-30rem] right-0")}>
+            <div className={cn("mt-[-5rem] lg:mt-0 flex gap-6 justify-center xl:justify-between items-start w-full flex-wrap lg:flex-nowrap")}>
                 {selection.map((testemony, index) => {
                     return (
                         <div key={index} className={cn("w-[16.5rem] flex flex-col h-[17.5rem]")}>
@@ -71,8 +79,8 @@ export default function Carousel() {
 
             <div className={cn("flex w-full items-center justify-center gap-3 mt-6")}>
                 <button onClick={() => setCurrent(0)} className={cn(button, current === 0 ? "bg-primary" : "bg-accents-2")}></button>
-                <button onClick={() => setCurrent(3)} className={cn(button, current === 3 ? "bg-primary" : "bg-accents-2")}></button>
-                <button onClick={() => setCurrent(6)} className={cn(button, current === 6 ? "bg-primary" : "bg-accents-2")}></button>
+                <button onClick={() => setCurrent(passo)} className={cn(button, current === passo ? "bg-primary" : "bg-accents-2")}></button>
+                <button onClick={() => setCurrent(passo * 2)} className={cn(button, current === passo * 2 ? "bg-primary" : "bg-accents-2")}></button>
             </div>
         </section>
     )

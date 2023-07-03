@@ -10,7 +10,7 @@ export default function Delivery() {
     return (
         <div className={cn("flex items-start justify-start w-[95vw] flex-col mb-56")} id="delivery">
             <h2 className={cn(subtitle, 'ml-12 w-full mb-14')}>How to use delivery <span className={cn(underlined)}>service</span></h2>
-            <div className={cn("flex w-full items-center justify-around")}>
+            <div className={cn("flex w-full items-center justify-around flex-wrap")}>
                 <div className={cn(stepClass)}>
                     <Image src="/images/hand-coffee.png" alt="latte" width={159} height={159} />
                     <h2 className={cn(text1)}>Choose your coffee</h2>
