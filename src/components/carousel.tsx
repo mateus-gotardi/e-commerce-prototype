@@ -6,7 +6,6 @@ import { shytext, subsubtitle, subtitle, underlined } from "./commonStyle";
 
 export default function Carousel() {
     let largura = window.screen.width
-    console.log(largura)
     let passo = 3
     if (largura < 1024) {
         passo = 2

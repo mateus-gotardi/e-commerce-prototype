@@ -1,0 +1,65 @@
+[
+    {
+        "imageURL": "/images/sandwich.jpg",
+        "name": "Sandwich",
+        "description": "Bread with meat and vegetables",
+        "rating": "4.8",
+        "price": "12 K"
+    },
+    {
+        "imageURL": "/images/hot.png",
+        "name": "Hot Milk",
+        "description": "Hot Milk with less sugar",
+        "rating": "4.7",
+        "price": "13 K"
+    },
+    {
+        "imageURL": "/images/ice.jpg",
+        "name": "Coffee Ice Cream",
+        "description": "special coffee with baunilha ice cream",
+        "rating": "4.6",
+        "price": "14 K"
+    },
+    {
+        "imageURL": "/images/cappo.png",
+        "name": "Cappucino",
+        "description": "Hot Cappucino",
+        "rating": "4.5",
+        "price": "14 K"
+    },
+    {
+        "imageURL": "/images/mocca.png",
+        "name": "Moccacinno",
+        "description": "Hot Moccacino ",
+        "rating": "4.4",
+        "price": "14 K"
+    },
+    {
+        "imageURL": "/images/waffles.png",
+        "name": "Waffle Ice Crem",
+        "description": "Wafle with Ice cream",
+        "rating": "4.7",
+        "price": "14 K"
+    },
+    {
+        "imageURL": "https://images.unsplash.com/photo-1502462041640-b3d7e50d0662?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80",
+        "name": "Vanilla Latte",
+        "temperature": "Hot",
+        "rating": "4.9",
+        "price": "21 K"
+    },
+    {
+        "imageURL": "/images/espresso.png",
+        "name": "Espresso",
+        "temperature": "",
+        "rating": "4.8",
+        "price": "12 K"
+    },
+    {
+        "imageURL": "/images/hazelnutlatte.png",
+        "name": "Hazelnut Latte",
+        "temperature": "",
+        "rating": "4.8",
+        "price": "23 K"
+    }
+]
