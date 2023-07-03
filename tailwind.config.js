@@ -22,7 +22,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'hero-pattern': "url('/images/hero-pattern.svg')",
-        'newsletter': "url('https://images.unsplash.com/photo-1620807773206-49c1f2957417')",
+        'newsletter': "url('/images/newsletter.png')",
       }
 
     },

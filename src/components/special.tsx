@@ -47,7 +47,7 @@ export default function Special() {
     },
     ]
     return (
-        <div className="flex flex-col items-start justify-center w-[98vw] gap-8 mb-28">
+        <div className="flex flex-col items-start justify-center w-[98vw] gap-8 mb-28" id="products">
             <h2 className={cn(subtitle, "ml-20")}>Special menu <span className={cn(underlined)}>for you</span></h2>
             <div className="w-full flex flex-wrap justify-center items-start gap-10">
                 {products.map((product, index) => {

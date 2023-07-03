@@ -13,13 +13,13 @@ export default function Header(props: { page?: string }) {
                 <Logo />
             </a>
             <nav className={cn("flex flex-row gap-7")}>
-                <a className={props.page === 'about' ? cn(linkStyle, 'font-semibold') : cn(linkStyle)}>
+                <a className={props.page === 'about' ? cn(linkStyle, 'font-semibold') : cn(linkStyle)} href="#about">
                     About Us
                 </a>
-                <a className={props.page === 'product' ? cn(linkStyle, 'font-semibold') : cn(linkStyle)}>
+                <a className={props.page === 'product' ? cn(linkStyle, 'font-semibold') : cn(linkStyle)} href="#products">
                     Our Product
                 </a>
-                <a className={props.page === 'delivery' ? cn(linkStyle, 'font-semibold') : cn(linkStyle)}>
+                <a className={props.page === 'delivery' ? cn(linkStyle, 'font-semibold') : cn(linkStyle)} href="#delivery">
                     Delivery
                 </a>
             </nav>

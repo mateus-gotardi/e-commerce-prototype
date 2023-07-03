@@ -8,7 +8,7 @@ export default function Delivery() {
     let text1 = "text-2xl font-semibold text-secondary mb-3"
     let text2 = "text-lg text-light text-secondary"
     return (
-        <div className={cn("flex items-start justify-start w-[95vw] flex-col mb-56")}>
+        <div className={cn("flex items-start justify-start w-[95vw] flex-col mb-56")} id="delivery">
             <h2 className={cn(subtitle, 'ml-12 w-full mb-14')}>How to use delivery <span className={cn(underlined)}>service</span></h2>
             <div className={cn("flex w-full items-center justify-around")}>
                 <div className={cn(stepClass)}>
