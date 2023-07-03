@@ -4,7 +4,7 @@ import { Box, BuyMe, Cappuccino, Header, Popular, Delivery, About, Special, Feed
 export default function Home() {
   return (
     <main
-      className={cn("flex min-h-screen flex-col items-center justify-between")}
+      className={cn("flex min-h-screen flex-col items-center justify-between overflow-x-hidden")}
     >
       <Header page="home" />
       <Box>

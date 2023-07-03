@@ -16,11 +16,13 @@ module.exports = {
       'glass':'#FFFFFF',
       'light':'#7E7D7A',
       'lowprimary':'#FFD28F',
+      'brown-light': "#FFCB7C",
+      'brown-lighter': "#FFD390"
     },
     extend: {
       backgroundImage: {
         'hero-pattern': "url('/images/hero-pattern.svg')",
-        'newsletter': "url('/images/footer-texture.png')",
+        'newsletter': "url('https://images.unsplash.com/photo-1620807773206-49c1f2957417')",
       }
 
     },
