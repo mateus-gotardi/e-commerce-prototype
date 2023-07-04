@@ -2,13 +2,17 @@
 import React from "react";
 import { cn } from "@/utils";
 import { Burger, IconCart, Logo, Lupa, Cross } from "./svgs";
+import { UseAppSelector } from "@/redux/store";
+import Cart from "./cart";
 export default function Header() {
     const [burger, setBurger] = React.useState(false);
     let linkStyle = "text-base text-center w-fit text-secondary p-2 cursor-pointer flex flex-row items-center gap-0.5 hover:text-primary transition-all duration-300";
+    const [cart, setCart] = React.useState(false);
+    const cartItems = UseAppSelector(state => state.cartReducer.value.items);
     return (
         <header
             className={cn(
-                "absolute top-0 flex flex-row justify-between w-full h-fit items-center py-4 z-50 px-5 lg:px-20"
+                "lg:absolute lg:bg-transparent bg-accents-2 top-0 flex flex-row justify-between w-full h-fit items-center py-4 z-50 px-5 lg:px-20"
             )}
         >
             <div className={cn("flex")}>
@@ -42,11 +46,12 @@ export default function Header() {
                         type="text z-10" placeholder="Cappuccino">
                     </input>
                 </div>
-                <a className={cn("cursor-pointer")}>
-                    <IconCart />
-                </a>
+                <button onClick={() => setCart(!cart)} className={cn("cursor-pointer")}>
+                    <IconCart color={cartItems.length > 0 ? "#FF912B" : "#7E7D7A"} />
+                </button>
             </div>
-
+            {cart && <Cart />}
+            
         </header>
     );
 }

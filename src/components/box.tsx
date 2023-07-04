@@ -4,21 +4,21 @@ import Image from "next/image";
 
 export default function Box(props: { children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined; }) {
   return (
-    <div className={cn("flex items-center justify-start flex-col bg-accents-2 h-[140vh] flex-wrap w-screen pt-20 lg:pt-0")}>
+    <div className={cn("flex items-center justify-start flex-col bg-accents-2 h-fit pb-10 lg:h-[140vh] flex-wrap w-screen lg:pt-0")}>
     <div
       className={cn(
-        "h-screen w-screen inset-0 flex justify-center gap-10 items-center flex-col lg:flex-row"
+        "h-fit lg:h-screen w-screen inset-0 flex justify-start lg:justify-center gap-10 items-center flex-col lg:flex-row"
       )}
     >
       <Image
-        className={cn("z-0 absolute top-[-1.8rem] right-0 hidden lg:block")}
+        className={cn("z-0 absolute md:top-[-4rem] md:right-[-8rem] lg:top-[-1.8rem] lg:right-0 hidden md:block")}
         src="/images/coffeegrains.png"
         alt="coffee grains"
         width={450}
         height={450}
       />
       <Image
-        className={cn("z-0 absolute bottom-[-18rem] left-[-3rem] hidden lg:block")}
+        className={cn("z-0 absolute md:bottom-[-18rem] md:left-[-18rem] lg:bottom-[-18rem] lg:left-[-3rem] hidden md:block")}
         src="/images/coffeegrains.png"
         alt="coffee grains"
         width={600}

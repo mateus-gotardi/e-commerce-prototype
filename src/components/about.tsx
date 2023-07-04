@@ -5,7 +5,7 @@ import { shytext, subsubtitle, subtitle, underlined } from "./commonStyle";
 
 export default function About() {
     return (
-        <section id="about" className={cn("w-screen h-[30rem] bg-hero-pattern flex align-center justify-around mb-28")}>
+        <section id="about" className={cn("w-screen h-fit py-12 lg:py-0 lg:h-[30rem] bg-hero-pattern flex align-center justify-around mb-28")}>
             <div className={cn("w-1/2 items-center justify-center hidden lg:flex")}>
                 <div className={cn("relative top-[-5rem] overflow-hidden rounded-lg outline outline-[7px] outline-glass/60 shadow-2xl")}>
                     <Image src="/images/about-coffee.jpg" alt="coffee cup" width={359} height={497} />

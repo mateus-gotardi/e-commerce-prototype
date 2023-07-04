@@ -3,11 +3,29 @@ import { cn } from "@/utils";
 import Image from "next/image";
 import { sticker } from "./commonStyle";
 import { StarFilled } from "./svgs";
+import { CartItem, Product, add } from "@/redux/features/cartReducer";
+import { useDispatch } from "react-redux";
+import { AppDispatch, UseAppSelector } from "@/redux/store";
 
 export default function ProductCard(props: {
     type: "popular" | "special",
-    product: { imageURL: string, name: string, temperature?: string, description?: string, rating: string, price: string }
+    product: { imageURL: string, name: string, quantity?: number, temperature?: string, description?: string, rating: string, price: string }
 }) {
+    const cartItems = UseAppSelector(state => state.cartReducer.value.items);
+    const dispatch = useDispatch<AppDispatch>();
+    const addToCart = (product: Product) => {
+        let prod = {
+            imageURL: product.imageURL,
+            name: product.name,
+            description: product.description,
+            rating: product.rating,
+            price: product.price,
+            temperature: product.temperature,
+            quantity: 1
+        } as CartItem
+        dispatch(add(prod));
+    }
+    let product = props.product
     let temperatureTag = "text-base border-2 rounded-md px-3 py-0.5 font-semibold"
     let temperatureTagFalse = temperatureTag + " text-lowprimary border-lowprimary"
     let temperatureTagTrue = temperatureTag + " text-primary border-primary"
@@ -39,9 +57,9 @@ export default function ProductCard(props: {
                             </h3>
                         </>}
                     </div>
-                    <a className={"cursor-pointer"}>
+                    <button onClick={() => addToCart(product)} className={"cursor-pointer"}>
                         <Image src="/images/cart.png" alt="cart" width={46} height={46} />
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
