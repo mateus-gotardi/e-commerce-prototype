@@ -7,6 +7,7 @@ import Feedback from "./feedback";
 import Header from "./header";
 import Newsletter from "./newsletter";
 import Popular from "./popular";
+import ShowProducts from "./showProducts";
 import Special from "./special";
 
-export { Box, Header, Cappuccino, BuyMe, Popular, Delivery, About, Special, Feedback, Newsletter };
+export { Box, Header, Cappuccino, BuyMe, Popular, Delivery, About, Special, Feedback, Newsletter, ShowProducts };

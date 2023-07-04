@@ -15,10 +15,10 @@ export default function BuyMe() {
             Boost your productivity and build your<br />mood with a glass of coffee in the morning
           </h2>
           <div className={cn("flex w-full items-center justify-center gap-8 lg:justify-start")}>
-            <a className={cn("bg-secondary cursor-pointer border-none text-sm flex items-center justify-center gap-2 text-glass font-semibold shadow-sm rounded-full px-8 py-3")}>
+            <a href="#products" className={cn("bg-secondary cursor-pointer border-none text-sm flex items-center justify-center gap-2 text-glass font-semibold shadow-sm rounded-full px-8 py-3")}>
               Order Now <Image src="/images/cart.png" alt="cart" width={25} height={25} />
             </a>
-            <a className={cn("text-primary cursor-pointer font-bold text-xs p-4")}>
+            <a href="#about" className={cn("text-primary cursor-pointer font-bold text-xs p-4")}>
               More menu
             </a>
           </div>

@@ -15,7 +15,7 @@ export default function About() {
                 <h2 className={cn(subtitle, "mb-10")}>About <span className={cn(underlined)}>us</span></h2>
                 <h3 className={cn(subsubtitle, "mb-5")}>We provide quality coffee,<br />and ready to deliver.</h3>
                 <p className={cn(shytext)}>We are a company that makes and distributes delicious drinks. our main product is made with a secret recipe and available in stores worldwide.</p>
-                <button className={cn("px-7 py-3 bg-secondary cursor-pointer text-tertiary rounded-full text-xs font-semibold")}>Get your coffee</button>
+                <a href="#products" className={cn("px-7 py-3 bg-secondary cursor-pointer text-tertiary rounded-full text-xs font-semibold")}>Get your coffee</a>
             </div>
         </section>
     )
