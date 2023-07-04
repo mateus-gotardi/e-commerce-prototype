@@ -22,7 +22,6 @@ export default function BuyMe() {
               More menu
             </a>
           </div>
-
         </div>
     )
 }
