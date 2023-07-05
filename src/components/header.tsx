@@ -7,19 +7,20 @@ import Cart from "./cart";
 import { useDispatch } from "react-redux";
 import { changeValue } from "@/redux/features/search";
 import { useRouter } from 'next/navigation';
+import { flexRow } from "@/commonStyle";
 
 export default function Header() {
     const router = useRouter();
     const dispatch = useDispatch<AppDispatch>();
     const [burger, setBurger] = React.useState(false);
-    let linkStyle = "text-base text-center w-fit text-secondary p-2 cursor-pointer flex flex-row items-center gap-0.5 hover:text-primary transition-all duration-300";
+    const linkStyle = cn(flexRow("center", "center"), "text-base text-center w-fit text-secondary p-2 cursor-pointer gap-0.5 hover:text-primary transition-all duration-300");
     const [cart, setCart] = React.useState(false);
     const cartItems = UseAppSelector(state => state.cartReducer.value.items);
     const search = UseAppSelector(state => state.searchReducer.value.search);
     return (
         <header
-            className={cn(
-                "lg:absolute lg:bg-transparent bg-accents-2 top-0 flex flex-row justify-between w-full h-fit items-center py-4 z-50 px-5 lg:px-20"
+            className={cn(flexRow("c", "b"),
+                "lg:absolute lg:bg-transparent bg-accents-2 top-0 w-full h-fit py-4 z-50 px-5 lg:px-20"
             )}
         >
             <div className={cn("flex")}>
@@ -32,7 +33,7 @@ export default function Header() {
             </div>
 
             <nav className={cn("flex-col lg:flex-row gap-7 lg:flex lg:bg-transparent bg-accents-2 rounded-lg p-4 lg:p-0 absolute lg:static top-16", burger ? "flex" : "hidden")}>
-                <div className={cn("flex lg:hidden items-center justify-center gap-2.5 bg-glass rounded-full px-3 py-2 shadow-lg")}>
+                <div className={cn(flexRow("c", "c"), "lg:hidden gap-2.5 bg-glass rounded-full px-3 py-2 shadow-lg")}>
                     <Lupa />
                     <input className={cn("bg-glass w-46 ml-2 text-sm placeholder-gray-400 border-none focus:outline-none")}
                         type="text z-10" placeholder="Cappuccino">
@@ -48,7 +49,7 @@ export default function Header() {
                     Delivery
                 </a>
             </nav>
-            <div className={cn("flex items-center justify-end gap-5")}>
+            <div className={cn(flexRow("c", "e"), "gap-5")}>
                 <form onSubmit={(e) => {
                     e.preventDefault()
                     router.replace("/products")
@@ -56,7 +57,7 @@ export default function Header() {
                     <Lupa />
                     <input className={cn("bg-glass w-46 ml-2 text-sm placeholder-gray-400 border-none focus:outline-none")}
                         type="text z-10" placeholder="Cappuccino" onChange={(e) => { dispatch(changeValue({ search: e.target.value })) }}
-                        value = {search}>
+                        value={search}>
                     </input>
                 </form>
                 <button onClick={() => setCart(!cart)} className={cn("cursor-pointer")}>

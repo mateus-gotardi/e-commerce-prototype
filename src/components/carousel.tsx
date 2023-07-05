@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { cn } from "@/utils";
 import Image from "next/image";
 import testemonys from "@/data/testemonys.json";
+import { flexCol, flexRow } from "@/commonStyle";
 
 export default function Carousel() {
 
@@ -18,10 +19,10 @@ export default function Carousel() {
         }
         setSelection(testemonys.slice(current, current + passo))
     }, [current]);
-    let button = "p2 rounded-full w-2 h-2 cursor-pointer"
+    const button = "p2 rounded-full w-2 h-2 cursor-pointer"
     return (
-        <section className={cn("w-[62vw] flex flex-col justify-between items-start xl:ml-[-30rem] right-0 z-20")}>
-            <div className={cn("mt-[-5rem] lg:mt-0 flex gap-6 justify-center lg:justify-around items-start w-full flex-wrap lg:flex-nowrap")}>
+        <section className={cn("w-[62vw] xl:ml-[-30rem] right-0 z-20", flexCol("s", "b"))}>
+            <div className={cn(flexRow("s", "c"), "mt-[-5rem] lg:mt-0 gap-6 lg:justify-around w-full flex-wrap lg:flex-nowrap")}>
                 {selection.map((testemony, index) => {
                     return (
                         <div key={index} className={cn("w-[16.5rem] flex flex-col h-[17.5rem]")}>

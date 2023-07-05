@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '@/utils';
-import { subtitle, underlined } from './commonStyle';
+import { flexCol, flexRow, subtitle, underlined } from '../commonStyle';
 import Image from 'next/image';
 
 export default function Delivery() {
@@ -8,9 +8,9 @@ export default function Delivery() {
     let text1 = "text-2xl font-semibold text-secondary mb-3 lg:text-left text-center"
     let text2 = "text-lg text-light text-secondary lg:text-left text-center"
     return (
-        <div className={cn("flex items-start justify-start w-screen lg:w-[95vw] flex-col mb-32 lg:mb-40 p-12")} id="delivery">
+        <div className={cn("w-screen lg:w-[95vw] mb-32 lg:mb-40 p-12", flexCol("s", "s"))} id="delivery">
             <h2 className={cn(subtitle, 'lg:ml-12 w-full mb-14 lg:text-left text-center')}>How to use delivery <span className={cn(underlined)}>service</span></h2>
-            <div className={cn("flex w-full items-center justify-around flex-wrap gap-4")}>
+            <div className={cn(flexRow("c", "a"), "w-full flex-wrap gap-4")}>
                 <div className={cn(stepClass)}>
                     <Image src="/images/hand-coffee.png" alt="latte" width={159} height={159} />
                     <h2 className={cn(text1)}>Choose your coffee</h2>
