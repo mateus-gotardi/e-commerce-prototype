@@ -21,7 +21,7 @@ export default function Carousel() {
     }, [current]);
     const button = "p2 rounded-full w-2 h-2 cursor-pointer"
     return (
-        <section className={cn("w-[62vw] xl:ml-[-30rem] right-0 z-20", flexCol("s", "b"))}>
+        <section className={cn("w-[62vw] lg:ml-[-40rem] z-20 pr-10", flexCol("s", "b"))}>
             <div className={cn(flexRow("s", "c"), "mt-[-5rem] lg:mt-0 gap-6 lg:justify-around w-full flex-wrap lg:flex-nowrap")}>
                 {selection.map((testemony, index) => {
                     return (

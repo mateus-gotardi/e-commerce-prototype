@@ -1,6 +1,7 @@
 import ReduxProvider from '@/redux/provider'
 import './globals.css'
 import { Poppins } from 'next/font/google'
+import { cn } from '@/utils'
 
 const poppins = Poppins({ weight: ["200", "400", "600", "800"], subsets: ["latin"] })
 
@@ -16,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={cn(poppins.className, "w-[99vw] overflow-x-hidden")}>
         <ReduxProvider>
           {children}
         </ReduxProvider>

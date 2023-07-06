@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "@/utils";
 import Image from "next/image";
-import { flexCol, flexRow, sticker } from "../commonStyle";
+import { flexCol, flexRow, hover1, sticker } from "../commonStyle";
 import { StarFilled } from "./svgs";
 import { CartItem, Product, add } from "@/redux/features/cartReducer";
 import { useDispatch } from "react-redux";
@@ -53,7 +53,7 @@ export default function ProductCard(props: {
     }
 
     return (
-        <div className={props.type.toLocaleLowerCase() === "popular" ? cn(card, "h-[24rem] w-[22rem] lg:top-[-19.5rem] outline outline-glass/60 outline-[6px]") : cn(card, 'mb-3 h-[26rem] w-[22rem]')}>
+        <div className={props.type.toLocaleLowerCase() === "popular" ? cn(hover1 ,card, "h-[24rem] w-[22rem] lg:top-[-19.5rem] outline outline-glass/60 outline-[6px]") : cn(card, 'mb-3 h-[26rem] w-[22rem]')}>
             <div className={cn(imageContainer)}>
                 <Image src={product.imageURL} alt={product.name}
                     width={350} height={350} className={cn("rounded-[0.8rem] aspect-auto object-cover h-full w-full")} />
@@ -77,7 +77,7 @@ export default function ProductCard(props: {
                             </h3>
                         </>}
                     </div>
-                    <button onClick={() => addToCart(product)} className={"cursor-pointer"}>
+                    <button onClick={() => addToCart(product)} className={cn("cursor-pointer", hover1)}>
                         <Image src="/images/cart.png" alt="cart" width={46} height={46} />
                     </button>
                 </div>
