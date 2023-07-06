@@ -7,7 +7,7 @@ import Cart from "./cart";
 import { useDispatch } from "react-redux";
 import { changeValue } from "@/redux/features/search";
 import { useRouter } from 'next/navigation';
-import { flexRow } from "@/commonStyle";
+import { flexRow, hover1 } from "@/commonStyle";
 
 export default function Header() {
     const router = useRouter();
@@ -60,7 +60,7 @@ export default function Header() {
                         value={search}>
                     </input>
                 </form>
-                <button onClick={() => setCart(!cart)} className={cn("cursor-pointer")}>
+                <button onClick={() => setCart(!cart)} className={cn("cursor-pointer", hover1)}>
                     <IconCart color={cartItems.length > 0 ? "#FF912B" : "#7E7D7A"} />
                 </button>
             </div>

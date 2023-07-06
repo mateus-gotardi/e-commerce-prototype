@@ -9,7 +9,7 @@ export default function Special() {
     const products = allProducts.slice(0, -3);
     return (
         <div className={cn(flexCol("s", "c"), "w-[98vw] gap-8 mb-28")} id="products">
-            <h2 className={cn(subtitle, "ml-20")}>Special menu <span className={cn(underlined)}>for you</span></h2>
+            <h2 className={cn(subtitle, "lg:ml-20 lg:pl-2 lg:w-fit w-full")}>Special menu <span className={cn(underlined)}>for you</span></h2>
             <ShowProducts products={products} />
         </div>
     )

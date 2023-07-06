@@ -9,7 +9,7 @@ export default function Delivery() {
     let text2 = "text-lg text-light text-secondary lg:text-left text-center"
     return (
         <div className={cn("w-screen lg:w-[95vw] mb-32 lg:mb-40 p-12", flexCol("s", "s"))} id="delivery">
-            <h2 className={cn(subtitle, 'lg:ml-12 w-full mb-14 lg:text-left text-center')}>How to use delivery <span className={cn(underlined)}>service</span></h2>
+            <h2 className={cn(subtitle, 'lg:ml-6 w-full mb-14 lg:text-left text-center')}>How to use delivery <span className={cn(underlined)}>service</span></h2>
             <div className={cn(flexRow("c", "a"), "w-full flex-wrap gap-4")}>
                 <div className={cn(stepClass)}>
                     <Image src="/images/hand-coffee.png" alt="latte" width={159} height={159} />

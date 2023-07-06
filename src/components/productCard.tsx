@@ -31,7 +31,7 @@ export default function ProductCard(props: {
     const temperatureTag = "text-base border-2 rounded-md px-3 py-0.5 font-semibold"
     const temperatureTagFalse = temperatureTag + " text-lowprimary border-lowprimary"
     const temperatureTagTrue = temperatureTag + " text-primary border-primary"
-    const nameAndPrice = "text-2xl text-secondary"
+    const nameAndPrice = "md:text-2xl text-xl text-secondary"
     const imageContainer = "w-[19rem] h-[19rem] bg-primary overflow-hidden rounded-[0.8rem]"
     const card = cn(flexCol("c", "b"),"bg-glass rounded-[0.8rem] px-5 py-6 shadow-xl relative")
     const changeTemperature = (temp: string) => {

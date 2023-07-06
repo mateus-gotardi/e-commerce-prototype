@@ -5,7 +5,7 @@ import { flexCol } from "@/commonStyle";
 
 export default function Box(props: { children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined; }) {
   return (
-    <div className={cn(flexCol("c", "s"),"bg-accents-2 h-fit pb-10 lg:h-[140vh] flex-wrap w-screen lg:pt-0")}>
+    <div className={cn(flexCol("c", "s"),"bg-accents-2 h-fit pb-10 lg:h-[140vh] flex-wrap w-screen lg:pt-0 overflow-x-hidden")}>
     <div
       className={cn(flexCol("c", "s"),
         "h-fit lg:h-screen w-screen inset-0 lg:justify-center gap-10 lg:flex-row"

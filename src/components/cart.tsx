@@ -22,7 +22,7 @@ export default function Cart({ close }: { close: () => void }) {
         return total;
     }
     return (
-        <div className={cn("absolute z-50 top-20 sm:left-[5vw] left-2 bg-accents md:px-10 px-3 md:pb-10 pt-2 pb-7 w-[90vw] rounded-2xl shadow-2xl")}>
+        <div className={cn("absolute z-50 top-20 left-[5vw] bg-accents md:px-10 px-3 md:pb-10 pt-2 pb-7 w-[90vw] rounded-2xl shadow-2xl")}>
             <div className={cn("flex justify-end items-start")}>
                 <button onClick={close} className={cn("p-4 md:p-3")}><Cross size={25} /></button>
             </div>
